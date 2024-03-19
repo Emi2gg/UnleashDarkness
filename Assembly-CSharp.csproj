@@ -61,12 +61,23 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2023.2.3f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Scene\Keys.cs" />
+    <Compile Include="Assets\Scripts\Scene\Floor_fall.cs" />
+    <Compile Include="Assets\Scripts\Player\Idle.cs" />
     <Compile Include="Assets\Scripts\Player\Limit.cs" />
     <Compile Include="Assets\Scripts\Player\Input_Handler.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemydetect.cs" />
     <Compile Include="Assets\Scripts\Scene\Floor_Light.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\Player\Health.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerAnimCom.cs" />
+    <Compile Include="Assets\Scripts\Player\Keys.cs" />
+    <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\StateMachine\IState.cs" />
+    <Compile Include="Assets\Scripts\Scene\Checkpoint.cs" />
+    <Compile Include="Assets\Scripts\Player\BaseState.cs" />
     <Compile Include="Assets\Scripts\Player\Move.cs" />
+    <Compile Include="Assets\Scripts\StateMachine\StateMachine.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerStateMachine.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -16,6 +16,8 @@ public class Limit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Respawn = transform.position;
+
     }
 
     // Update is called once per frame
@@ -31,31 +33,40 @@ public class Limit : MonoBehaviour
 
             Cayo = true;
             transform.position = Respawn;
-            hasCheckpoint = false;
+           
         } else if (position.y >= Cae)
         {
             Cayo = false;
         }
-        else if (hasCheckpoint == true)
+        
+        
+        if (hasCheckpoint == true) 
         {
             Respawn = transform.position;
+            hasCheckpoint = false;
+
         }
 
 
 
 
 
-       
+
+
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Checkpoint")
+        if ((collision.gameObject.tag == "Checkpoint") && (hasCheckpoint == false))
 
-        {
+        { 
+
             hasCheckpoint = true;
            
-            
+
+
+
         }
+        
 
     }
 }
