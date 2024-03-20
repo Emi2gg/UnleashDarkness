@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Player\Limit.cs" />
     <Compile Include="Assets\Scripts\Player\Input_Handler.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemydetect.cs" />
+    <Compile Include="Assets\Scripts\Scene\Door_light.cs" />
     <Compile Include="Assets\Scripts\Scene\Floor_Light.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Player\Health.cs" />

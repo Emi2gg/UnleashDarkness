@@ -53,9 +53,12 @@ public class Keys : MonoBehaviour
         {
             moveDoor = false;
             moveDoorDown = true;
-            
-      
-        }if (Door.transform.position.y <= Abajo)
+            Door.transform.Translate(0, 0, 0);
+
+
+
+        }
+        if (Door.transform.position.y <= Abajo)
         {
 
             moveDoorDown = false;
@@ -77,10 +80,11 @@ public class Keys : MonoBehaviour
             hasKey = false;
             moveDoor= true;
             moveDoorDown= false;
-        
+
+
         }
-        
-        
+
+
     }
 
 }

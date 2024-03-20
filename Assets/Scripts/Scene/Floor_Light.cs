@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Floor_Light : MonoBehaviour
 {
-    [SerializeField] private bool _isOn = false;
+    [SerializeField] public bool _isOn = false;
     [SerializeField] MeshRenderer _floorBulb = null;
+    [HideInInspector] public Door_light counter;
+    public int resettingFloor = 0;
 
     [SerializeField] private Material _onMaterial, _offMaterial;
 
@@ -19,13 +21,25 @@ public class Floor_Light : MonoBehaviour
         if (_isOn)
         {
             _floorBulb.material = _onMaterial;
-            
+
+            counter = Object.FindFirstObjectByType<Door_light>();
+            counter.floorLights = +1;
 
 
 
+
+        }else if (_isOn==false) 
+               
+        {
+            _floorBulb.material = _offMaterial;
+
+        }if (resettingFloor == 1) 
+        {
+        _isOn=false;
+            resettingFloor = 0;
         }
-        
-        
+
+
 
 
     }
@@ -35,6 +49,7 @@ public class Floor_Light : MonoBehaviour
 
         {
             _isOn = true;
+            
         }
     }
 
